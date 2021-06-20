@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="assets/css/tailwind.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Open+Sans&display=swap" rel="stylesheet"> 
+  <!-- ... -->
+</head>
+
+<body>
+  <div id=header class="container fixed top-0 z-10 mx-auto h-14 min-w-full border-b bg-white">
+    <div id="progress" class="fixed top-0 w-full h-1 z-20" style="background:linear-gradient(to right, #4dc0b5 var(--scroll), transparent 0);"></div>
+    <div class="flex flex-row py-1 w-full h-full md:max-w-5xl mx-auto justify-center items-center px-5 md:px-10">
+      <div class="flex-none">logo.png</div>
+      <div class="flex-grow"></div>
+      <div class="flex-none"><button class="rounded-full border">test</button></div>
+   </div>
+  </div>
+
+  <div id=content class="container mt-14 mx-auto min-h-screen">
+    <div class="flex py-10 flex-row justify-center">
+      <div class="w-full md:max-w-3xl">
+        <article class="prose prose-lg prose-purple w-full md:max-w-3xl max-w-none px-5 md:px-10 leading-relaxed tracking-normal antialiased"> <!-- actual content -->
+          <h1>Tutorial for Something and Somewhat</h1>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras varius nisi ut quam ultrices aliquet. Pellentesque bibendum id neque auctor varius. Phasellus ultricies turpis at ligula lobortis placerat. Nullam euismod id nunc in consequat. Morbi tellus metus, fringilla et mi quis, varius hendrerit lacus. Cras sed nisl eget tortor vehicula mollis vitae nec libero. Donec nec dapibus felis, vulputate facilisis nulla. Nam tincidunt dui sed enim luctus dictum. Praesent leo purus, aliquam non purus at, sollicitudin suscipit nunc. </p>
+
+          <a href="#">link</a>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras varius nisi ut quam ultrices aliquet. Pellentesque bibendum id neque auctor varius. Phasellus ultricies turpis at ligula lobortis placerat. Nullam euismod id nunc in consequat. Morbi tellus metus, fringilla et mi quis, varius hendrerit lacus. Cras sed nisl eget tortor vehicula mollis vitae nec libero. Donec nec dapibus felis, vulputate facilisis nulla. Nam tincidunt dui sed enim luctus dictum. Praesent leo purus, aliquam non purus at, sollicitudin suscipit nunc. </p>
+
+          <h2>title</h2>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras varius nisi ut quam ultrices aliquet. Pellentesque bibendum id neque auctor varius. Phasellus ultricies turpis at ligula lobortis placerat. Nullam euismod id nunc in consequat. Morbi tellus metus, fringilla et mi quis, varius hendrerit lacus. Cras sed nisl eget tortor vehicula mollis vitae nec libero. Donec nec dapibus felis, vulputate facilisis nulla. Nam tincidunt dui sed enim luctus dictum. Praesent leo purus, aliquam non purus at, sollicitudin suscipit nunc. </p>
+
+          <h3>title</h3>
+          <h4>title</h4>
+          <h5>title</h5>
+          <h6>title</h6>
+
+          <pre>test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test </pre>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras varius nisi ut quam ultrices aliquet. Pellentesque bibendum id neque auctor varius. Phasellus ultricies turpis at ligula lobortis placerat. Nullam euismod id nunc in consequat. Morbi tellus metus, fringilla et mi quis, varius hendrerit lacus. Cras sed nisl eget tortor vehicula mollis vitae nec libero. Donec nec dapibus felis, vulputate facilisis nulla. Nam tincidunt dui sed enim luctus dictum. Praesent leo purus, aliquam non purus at, sollicitudin suscipit nunc. </p>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <div id=footer class="container mx-auto min-w-full bg-white">
+    <div class="flex flex-row w-full md:max-w-3xl mx-auto justify-center py-5 px-5 md:px-10 border-t">
+      <div class="flex-none">footer</div>
+   </div>
+
+  <script>
+    /* Progress bar */
+    //Source: https://alligator.io/js/progress-bar-javascript-css-variables/
+    var h = document.documentElement,
+      b = document.body,
+      st = 'scrollTop',
+      sh = 'scrollHeight',
+      progress = document.querySelector('#progress'),
+      scroll;
+    var scrollpos = window.scrollY;
+    // var header = document.getElementById("header");
+    // var navcontent = document.getElementById("nav-content");
+
+    document.addEventListener('scroll', function() {
+
+      /*Refresh scroll % width*/
+      scroll = (h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight) * 100;
+      progress.style.setProperty('--scroll', scroll + '%');
+
+      /*Apply classes for slide in bar*/
+      scrollpos = window.scrollY;
+
+      // if (scrollpos > 10) {
+      //   header.classList.add("bg-white");
+      //   header.classList.add("shadow");
+      //   navcontent.classList.remove("bg-gray-100");
+      //   navcontent.classList.add("bg-white");
+      // } else {
+      //   header.classList.remove("bg-white");
+      //   header.classList.remove("shadow");
+      //   navcontent.classList.remove("bg-white");
+      //   navcontent.classList.add("bg-gray-100");
+
+      // }
+
+    });    
+  </script>
+
+</body>
+</html>
