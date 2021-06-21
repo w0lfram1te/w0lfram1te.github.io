@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html font-sans>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,21 +9,25 @@
   <!-- ... -->
 </head>
 
-<body>
+<body class="bg-white">
   <div id=header class="container fixed top-0 z-10 mx-auto h-14 min-w-full border-b bg-white">
     <div id="progress" class="fixed top-0 w-full h-1 z-20" style="background:linear-gradient(to right, #4dc0b5 var(--scroll), transparent 0);"></div>
     <div class="flex flex-row py-1 w-full h-full md:max-w-5xl mx-auto justify-center items-center px-5 md:px-10">
-      <div class="flex-none">logo.png</div>
+      <div class="flex-none font-mono text-lg px-5">./w<span class=text-purple-600>0</span>lfram<span class=text-purple-600>1</span>te<span id=blink class=opacity-0>_</span></div>
       <div class="flex-grow"></div>
-      <div class="flex-none"><button class="rounded-full border">test</button></div>
+      <div class="flex-none px-5 font-bold underline font-mono">posts</div>
+      <div class="flex-none px-5 font-mono">whoami</div>
+      <!-- <div class="flex-none px-2"><button class="rounded-full border">button</button></div> -->
    </div>
   </div>
 
   <div id=content class="container mt-14 mx-auto min-h-screen">
     <div class="flex py-10 flex-row justify-center">
       <div class="w-full md:max-w-3xl">
-        <article class="prose prose-lg prose-purple w-full md:max-w-3xl max-w-none px-5 md:px-10 leading-relaxed tracking-normal antialiased"> <!-- actual content -->
+        <article class="prose prose-lg prose-purple w-full md:max-w-3xl max-w-none px-5 md:px-10 leading-relaxed tracking-normal subpixel-antialiased"> 
           <h1>Tutorial for Something and Somewhat</h1>
+          <p>published date; updated date</p>
+          <p>slug description</p>
 
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras varius nisi ut quam ultrices aliquet. Pellentesque bibendum id neque auctor varius. Phasellus ultricies turpis at ligula lobortis placerat. Nullam euismod id nunc in consequat. Morbi tellus metus, fringilla et mi quis, varius hendrerit lacus. Cras sed nisl eget tortor vehicula mollis vitae nec libero. Donec nec dapibus felis, vulputate facilisis nulla. Nam tincidunt dui sed enim luctus dictum. Praesent leo purus, aliquam non purus at, sollicitudin suscipit nunc. </p>
 
@@ -46,11 +50,27 @@
         </article>
       </div>
     </div>
-  </div>
+  </div> 
+<!-- 
+  <div id=content class="container mt-14 mx-auto min-h-screen">
+    <div class="flex py-10 flex-row justify-center">
+      <div class="w-full md:max-w-3xl">
+        <article class="prose prose-lg prose-purple w-full md:max-w-3xl max-w-none px-5 md:px-10 leading-relaxed tracking-normal subpixel-antialiased">
+          <p class=text-xl>hello,</p>
 
+         <p>I'm Kyle. I go by the name w0lfram1te online for privacy and branding purposes. I have a variety of interests, including but not limited to the following:</p>
+
+
+          <p>This website was created to serve as an online log of information security and information security-adjacent things that I get around to doing (and documenting). This also serves as some form of accountability to improve on my documentation and technical writing skills.</p>
+          
+        </article>
+      </div>
+    </div>
+  </div>
+ -->
   <div id=footer class="container mx-auto min-w-full bg-white">
     <div class="flex flex-row w-full md:max-w-3xl mx-auto justify-center py-5 px-5 md:px-10 border-t">
-      <div class="flex-none">footer</div>
+      <div class="flex-none font-mono">EOF</div>
    </div>
 
   <script>
@@ -63,8 +83,8 @@
       progress = document.querySelector('#progress'),
       scroll;
     var scrollpos = window.scrollY;
-    // var header = document.getElementById("header");
-    // var navcontent = document.getElementById("nav-content");
+    var header = document.getElementById("header");
+    var navcontent = document.getElementById("nav-content");
 
     document.addEventListener('scroll', function() {
 
@@ -75,21 +95,26 @@
       /*Apply classes for slide in bar*/
       scrollpos = window.scrollY;
 
-      // if (scrollpos > 10) {
-      //   header.classList.add("bg-white");
-      //   header.classList.add("shadow");
-      //   navcontent.classList.remove("bg-gray-100");
-      //   navcontent.classList.add("bg-white");
-      // } else {
-      //   header.classList.remove("bg-white");
-      //   header.classList.remove("shadow");
-      //   navcontent.classList.remove("bg-white");
-      //   navcontent.classList.add("bg-gray-100");
+      if (scrollpos > 10) {
+        header.classList.add("bg-white");
+        header.classList.add("shadow");
+        navcontent.classList.remove("bg-gray-100");
+        navcontent.classList.add("bg-white");
+      } else {
+        header.classList.remove("bg-white");
+        header.classList.remove("shadow");
+        navcontent.classList.remove("bg-white");
+        navcontent.classList.add("bg-gray-100");
 
-      // }
+      }
 
     });    
   </script>
-
+  <script type="text/javascript">
+      var blink = document.getElementById('blink');
+      setInterval(function() {
+          blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
+      }, 1000);
+  </script>
 </body>
 </html>
