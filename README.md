@@ -1,8 +1,26 @@
 # w0lfram1te.github.io
 
 ## Dependencies
-Uses tailwindcss for css and Jekyll for hosting.
+- npm/tailwindcss
+- Jekyll
 
+### npm/tailwindcss
+```bash
+sudo apt install npm
+sudo npm install -g n
+sudo n stable
+```
+```bash
+npm install -D tailwindcss@latest postcss@latest autoprefixer@latest @tailwindcss/typography
+```
+
+### Jekyll
+```bash
+sudo apt install ruby ruby-dev
+gem install jekyll bundler
+```
+
+## Compiling tailwindcss
 Commands to remember:
 1. Command to run to modify the stylesheets:
 	```bash
