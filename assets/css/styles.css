@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-	fontFamily: {
+	fontFamily {
 		sans:"'Open Sans'";
 		mono:"'Fira Code'";
 	};

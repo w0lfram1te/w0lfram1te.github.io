@@ -590,7 +590,7 @@ video {
   border-color: rgba(229, 231, 235, var(--tw-border-opacity));
 }
 
-fontFamily: {
+fontFamily {
   sans:"'Open Sans'";
   mono:"'Fira Code'";
 };
