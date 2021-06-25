@@ -4,7 +4,7 @@ const colors = require('tailwindcss/colors')
 module.exports = {
   purge: {
     content: [
-      `./index.html`,
+      `./*.html`,
       './_layouts/*.html',
       './_posts/*.html'
     ],
@@ -815,17 +815,16 @@ module.exports = {
       50: '50',
     },
 
-  },
-  extend: {
-    typography: {
-      DEFAULT: {
-        css: 
-          {
+    extend: {
+      typography: (theme) => ({
+        DEFAULT: {
+          css: [{
             a: {
               textDecoration: 'none',
             },
-          },
-      },
+          }],
+        },
+      }),
     },
   },
   variantOrder: [
