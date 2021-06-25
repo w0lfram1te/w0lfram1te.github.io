@@ -1,0 +1,20 @@
+---
+layout: default
+title: home
+permalink: /
+---
+<div class="flex flex-row text-base pb-5 px-5 md:px-10 items-center justify-center border-b">
+  <div class="w-24 font-mono text-base text-center">date</div>
+  <div class="flex-grow font-mono text-base text-center px-5">title</div>  
+  <div class="w-28 text-base font-mono text-base text-center">metadata</div>
+</div>
+
+{% for post in site.words reversed %}
+<div class="flex flex-row prose max-w-none py-5 px-5 md:px-10 items-center justify-center border-b">
+  <div class="w-24 font-mono text-base text-center">{{ post.date_created }}</div>
+  <div class="flex-1 font-sans text-lg text-left px-5">
+    <a href="{{ post.url }}">{{ post.title }}</a>
+  </div>
+  <div class="w-28 font-mono text-base text-center text-purple-600">{{ post.metadata }}</div>
+</div>
+{% endfor %}

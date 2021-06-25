@@ -6,7 +6,8 @@ module.exports = {
     content: [
       `./*.html`,
       './_layouts/*.html',
-      './_posts/*.html'
+      './_pages/*.html',
+      './_words/*.html',
     ],
     options: {
       keyframes: true,

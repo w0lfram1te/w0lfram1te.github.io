@@ -1,1 +1,35 @@
-permalink: /:title
+# Where things are
+collections:
+  words:
+    output          : true
+    permalink       : /:title
+    sort_by         : date_created
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "words"
+    values:
+      layout: "post"
+      author: "w0lfram1te"
+
+# Handling Reading
+exclude             : [
+  "README.md", 
+  "node_modules/", 
+  "Gemfile", 
+  "Gemfile.lock", 
+  ".git",
+  "archives",
+  "package-lock.json",
+  "tailwind.config.js"
+]
+include             : [
+  "_pages",
+  "_media"
+]
+
+# Serving
+port                : 4444
+host                : 127.0.0.1

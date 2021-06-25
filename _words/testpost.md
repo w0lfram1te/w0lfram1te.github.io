@@ -1,5 +1,8 @@
 ---
-layout: post
+title: Tutorial for Something and Somewhat
+date_created: 2021-06-24
+date_updated: 2021-06-24
+metadata: write-up
 ---
 
 # Tutorial for Something and Somewhat
