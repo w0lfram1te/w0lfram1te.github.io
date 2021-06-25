@@ -1023,7 +1023,7 @@ module.exports = {
   },
   plugins: [
 	  require('@tailwindcss/typography')({
-      modifiers: ['sm', 'base', 'lg'],
+      modifiers: ['sm', 'base', 'lg', 'purple'],
     }),
   ],
 }

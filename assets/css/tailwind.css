@@ -1435,6 +1435,14 @@ fontFamily {
   margin-bottom: 1em;
 }
 
+.prose-purple a {
+  color: #7c3aed;
+}
+
+.prose-purple a code {
+  color: #7c3aed;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -28738,6 +28746,14 @@ fontFamily {
   .md\:prose-lg h6 {
     margin-top: 1em;
     margin-bottom: 1em;
+  }
+
+  .md\:prose-purple a {
+    color: #7c3aed;
+  }
+
+  .md\:prose-purple a code {
+    color: #7c3aed;
   }
 
   .md\:sr-only {
