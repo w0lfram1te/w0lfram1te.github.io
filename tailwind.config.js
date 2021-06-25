@@ -822,8 +822,39 @@ module.exports = {
             a: {
               textDecoration: 'none',
             },
+            blockquote: {
+               borderLeftColor: theme('colors.purple.300'),
+            },
           }],
         },
+        lg: {
+          css: [{
+            h1: {
+              marginTop: '1em',
+              marginBottom: '1em',
+            },
+            h2: {
+              marginTop: '1em',
+              marginBottom: '1em',
+            },
+            h3: {
+              marginTop: '1em',
+              marginBottom: '1em',
+            },
+            h4: {
+              marginTop: '1em',
+              marginBottom: '1em',
+            },
+            h5: {
+              marginTop: '1em',
+              marginBottom: '1em',
+            },
+            h6: {
+              marginTop: '1em',
+              marginBottom: '1em',
+            },
+          }],
+        }
       }),
     },
   },
@@ -991,6 +1022,8 @@ module.exports = {
     zIndex: ['responsive', 'focus-within', 'focus'],
   },
   plugins: [
-	  require('@tailwindcss/typography'),
+	  require('@tailwindcss/typography')({
+      modifiers: ['sm', 'base', 'lg'],
+    }),
   ],
 }
