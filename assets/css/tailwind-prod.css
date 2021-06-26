@@ -215,8 +215,7 @@ select {
 Correct the inability to style clickable types in iOS and Safari.
 */
 
-button,
-[type='button'] {
+button {
   -webkit-appearance: button;
 }
 
@@ -345,7 +344,7 @@ ul {
  */
 
 html {
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Lato", sans-serif;
   /* 1 */
   line-height: 1.5;
   /* 2 */
@@ -499,7 +498,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: "Roboto Mono", monospace;
 }
 
 /**
@@ -583,34 +582,6 @@ video {
 .prose strong {
   color: #111827;
   font-weight: 600;
-}
-
-.prose ol[type="a"] {
-  --list-counter-style: lower-alpha;
-}
-
-.prose ol[type="a" s] {
-  --list-counter-style: lower-alpha;
-}
-
-.prose ol[type="I"] {
-  --list-counter-style: upper-roman;
-}
-
-.prose ol[type="i"] {
-  --list-counter-style: lower-roman;
-}
-
-.prose ol[type="I" s] {
-  --list-counter-style: upper-roman;
-}
-
-.prose ol[type="i" s] {
-  --list-counter-style: lower-roman;
-}
-
-.prose ol[type="1"] {
-  --list-counter-style: decimal;
 }
 
 .prose ol > li {
@@ -1275,11 +1246,6 @@ video {
   background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
 }
 
-.bg-gray-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
-}
-
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
@@ -1316,11 +1282,11 @@ video {
 }
 
 .font-sans {
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Lato", sans-serif;
 }
 
 .font-mono {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: "Roboto Mono", monospace;
 }
 
 .text-base {
@@ -1345,6 +1311,11 @@ video {
   letter-spacing: 0em;
 }
 
+.text-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgba(107, 114, 128, var(--tw-text-opacity));
+}
+
 .text-purple-600 {
   --tw-text-opacity: 1;
   color: rgba(124, 58, 237, var(--tw-text-opacity));
@@ -1365,11 +1336,6 @@ video {
 
 *, ::before, ::after {
   --tw-shadow: 0 0 #0000;
-}
-
-.shadow {
-  --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 *, ::before, ::after {

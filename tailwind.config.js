@@ -252,17 +252,16 @@ module.exports = {
     },
     fontFamily: {
       sans: [
-        '"Open Sans"',
+        '"Lato"',
         // 'ui-sans-serif',
         // 'system-ui',
         // '-apple-system',
         // 'BlinkMacSystemFont',
-        // '"Segoe UI"',
         // 'Roboto',
         // '"Helvetica Neue"',
         // 'Arial',
         // '"Noto Sans"',
-        // 'sans-serif',
+        'sans-serif',
         // '"Apple Color Emoji"',
         // '"Segoe UI Emoji"',
         // '"Segoe UI Symbol"',
@@ -270,7 +269,7 @@ module.exports = {
       ],
       serif: ['ui-serif', 'Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
       mono: [
-        '"Fira Code"',
+        '"Roboto Mono"',
         // 'ui-monospace',
         // 'SFMono-Regular',
         // 'Menlo',
@@ -278,7 +277,7 @@ module.exports = {
         // 'Consolas',
         // '"Liberation Mono"',
         // '"Courier New"',
-        // 'monospace',
+        'monospace',
       ],
     },
     fontSize: {
