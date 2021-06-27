@@ -834,26 +834,32 @@ module.exports = {
             h1: {
               marginTop: '1em',
               marginBottom: '1em',
+              fontWeight: '600',
             },
             h2: {
               marginTop: '1em',
               marginBottom: '1em',
+              fontWeight: '600',
             },
             h3: {
               marginTop: '1em',
               marginBottom: '1em',
+              fontWeight: '600',
             },
             h4: {
               marginTop: '1em',
               marginBottom: '1em',
+              fontWeight: '600',
             },
             h5: {
               marginTop: '1em',
               marginBottom: '1em',
+              fontWeight: '600',
             },
             h6: {
               marginTop: '1em',
               marginBottom: '1em',
+              fontWeight: '600',
             },
           }],
         }
