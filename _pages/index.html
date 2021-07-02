@@ -9,7 +9,7 @@ permalink: /
   <div class="w-28 text-base font-mono text-base text-center">metadata</div>
 </div>
 
-{% assign reverse_words = site.words | reverse %}
+{% assign reverse_words = site.words | sort: "date_created" | reverse %}
 {% for post in reverse_words %}
 <div class="flex flex-row prose max-w-none py-5 px-5 md:px-10 items-center justify-center border-b">
   <div class="w-24 font-mono text-sm text-center">{{ post.date_created }}</div>

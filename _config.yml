@@ -3,7 +3,7 @@ collections:
   words:
     output          : true
     permalink       : /:title
-    sort_by         : date_created
+    # sort_by         : date_created
 
 defaults:
   -
