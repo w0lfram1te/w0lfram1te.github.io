@@ -1,4 +1,4 @@
-/*! tailwindcss v2.2.2 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v2.2.19 | MIT License | https://tailwindcss.com */
 
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 
@@ -310,16 +310,6 @@ button {
   background-image: none;
 }
 
-/**
- * Work around a Firefox/IE bug where the transparent `button` background
- * results in a loss of the default `button` focus styles.
- */
-
-button:focus {
-  outline: 1px dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
 fieldset {
   margin: 0;
   padding: 0;
@@ -445,6 +435,14 @@ button {
   cursor: pointer;
 }
 
+/**
+ * Override legacy focus reset from Normalize with modern Firefox focus styles.
+ *
+ * This is actually an improvement over the new defaults in Firefox in our testing,
+ * as it triggers the better focus styles even for links, which still use a dotted
+ * outline in Firefox by default.
+ */
+
 table {
   border-collapse: collapse;
 }
@@ -544,6 +542,10 @@ video {
   max-width: 100%;
   height: auto;
 }
+
+/**
+ * Ensure the default browser behavior of the `hidden` attribute.
+ */
 
 *, ::before, ::after {
   --tw-border-opacity: 1;
@@ -893,245 +895,6 @@ video {
 
 .prose > :last-child {
   margin-bottom: 0;
-}
-
-.prose-lg {
-  font-size: 1.125rem;
-  line-height: 1.7777778;
-}
-
-.prose-lg p {
-  margin-top: 1.3333333em;
-  margin-bottom: 1.3333333em;
-}
-
-.prose-lg [class~="lead"] {
-  font-size: 1.2222222em;
-  line-height: 1.4545455;
-  margin-top: 1.0909091em;
-  margin-bottom: 1.0909091em;
-}
-
-.prose-lg blockquote {
-  margin-top: 1.6666667em;
-  margin-bottom: 1.6666667em;
-  padding-left: 1em;
-}
-
-.prose-lg h1 {
-  font-size: 2.6666667em;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  line-height: 1;
-  font-weight: 600;
-}
-
-.prose-lg h2 {
-  font-size: 1.6666667em;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  line-height: 1.3333333;
-  font-weight: 600;
-}
-
-.prose-lg h3 {
-  font-size: 1.3333333em;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  line-height: 1.5;
-  font-weight: 600;
-}
-
-.prose-lg h4 {
-  margin-top: 1em;
-  margin-bottom: 1em;
-  line-height: 1.5555556;
-  font-weight: 600;
-}
-
-.prose-lg img {
-  margin-top: 1.7777778em;
-  margin-bottom: 1.7777778em;
-}
-
-.prose-lg video {
-  margin-top: 1.7777778em;
-  margin-bottom: 1.7777778em;
-}
-
-.prose-lg figure {
-  margin-top: 1.7777778em;
-  margin-bottom: 1.7777778em;
-}
-
-.prose-lg figure > * {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.prose-lg figure figcaption {
-  font-size: 0.8888889em;
-  line-height: 1.5;
-  margin-top: 1em;
-}
-
-.prose-lg code {
-  font-size: 0.8888889em;
-}
-
-.prose-lg h2 code {
-  font-size: 0.8666667em;
-}
-
-.prose-lg h3 code {
-  font-size: 0.875em;
-}
-
-.prose-lg pre {
-  font-size: 0.8888889em;
-  line-height: 1.75;
-  margin-top: 2em;
-  margin-bottom: 2em;
-  border-radius: 0.375rem;
-  padding-top: 1em;
-  padding-right: 1.5em;
-  padding-bottom: 1em;
-  padding-left: 1.5em;
-}
-
-.prose-lg ol {
-  margin-top: 1.3333333em;
-  margin-bottom: 1.3333333em;
-}
-
-.prose-lg ul {
-  margin-top: 1.3333333em;
-  margin-bottom: 1.3333333em;
-}
-
-.prose-lg li {
-  margin-top: 0.6666667em;
-  margin-bottom: 0.6666667em;
-}
-
-.prose-lg ol > li {
-  padding-left: 1.6666667em;
-}
-
-.prose-lg ol > li::before {
-  left: 0;
-}
-
-.prose-lg ul > li {
-  padding-left: 1.6666667em;
-}
-
-.prose-lg ul > li::before {
-  width: 0.3333333em;
-  height: 0.3333333em;
-  top: calc(0.8888889em - 0.1666667em);
-  left: 0.2222222em;
-}
-
-.prose-lg > ul > li p {
-  margin-top: 0.8888889em;
-  margin-bottom: 0.8888889em;
-}
-
-.prose-lg > ul > li > *:first-child {
-  margin-top: 1.3333333em;
-}
-
-.prose-lg > ul > li > *:last-child {
-  margin-bottom: 1.3333333em;
-}
-
-.prose-lg > ol > li > *:first-child {
-  margin-top: 1.3333333em;
-}
-
-.prose-lg > ol > li > *:last-child {
-  margin-bottom: 1.3333333em;
-}
-
-.prose-lg ul ul, .prose-lg ul ol, .prose-lg ol ul, .prose-lg ol ol {
-  margin-top: 0.8888889em;
-  margin-bottom: 0.8888889em;
-}
-
-.prose-lg hr {
-  margin-top: 3.1111111em;
-  margin-bottom: 3.1111111em;
-}
-
-.prose-lg hr + * {
-  margin-top: 0;
-}
-
-.prose-lg h2 + * {
-  margin-top: 0;
-}
-
-.prose-lg h3 + * {
-  margin-top: 0;
-}
-
-.prose-lg h4 + * {
-  margin-top: 0;
-}
-
-.prose-lg table {
-  font-size: 0.8888889em;
-  line-height: 1.5;
-}
-
-.prose-lg thead th {
-  padding-right: 0.75em;
-  padding-bottom: 0.75em;
-  padding-left: 0.75em;
-}
-
-.prose-lg thead th:first-child {
-  padding-left: 0;
-}
-
-.prose-lg thead th:last-child {
-  padding-right: 0;
-}
-
-.prose-lg tbody td {
-  padding-top: 0.75em;
-  padding-right: 0.75em;
-  padding-bottom: 0.75em;
-  padding-left: 0.75em;
-}
-
-.prose-lg tbody td:first-child {
-  padding-left: 0;
-}
-
-.prose-lg tbody td:last-child {
-  padding-right: 0;
-}
-
-.prose-lg > :first-child {
-  margin-top: 0;
-}
-
-.prose-lg > :last-child {
-  margin-bottom: 0;
-}
-
-.prose-lg h5 {
-  margin-top: 1em;
-  margin-bottom: 1em;
-  font-weight: 600;
-}
-
-.prose-lg h6 {
-  margin-top: 1em;
-  margin-bottom: 1em;
-  font-weight: 600;
 }
 
 .prose-purple a {
