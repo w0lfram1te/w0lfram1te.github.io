@@ -2,8 +2,8 @@
 title: Maintaining File Backups using Cron and Logrotate
 date_created: 2022-06-20
 date_updated: 2022-06-30
-metadata: 
-tags: research
+metadata: research
+tags:
 ---
 # Maintaining File Backupus using Cron and Logrotate
 
