@@ -16,7 +16,7 @@ For obvious reasons, this isn't ideal. There needed to be actual backups of the 
 Initially, I thought a simple cron job run every hour would suffice in creating a backup of the data. Indeed, this would work but would inevitably lead to managing the ever-growing archive.
 
 ```bash
-0 * * * * tar -czvf /var/opt/application_name/backups/backup-`date +%Y-%m-%dT%H%M%S`.tgz data_folder/
+0 * * * * root tar -czvf /var/opt/application_name/backups/backup-`date +%Y-%m-%dT%H%M%S`.tgz data_folder/
 ```
 
 Since I only need to protect against accidentally propagating a _delete all_ for this specific case, I don't need to keep a complete archive of my data. This means that I only need to have buffer copies of my data and delete older copies of the backup after a certain time.
@@ -65,7 +65,7 @@ Since logrotate is also executed at the turn of the hour, it might be better to 
 ## tl;dr
 
 ```bash
-echo '30 * * * * tar -czvf /var/opt/application_name/backups/backup.tgz data_folder/' | sudo tee /etc/cron.d/file_backup
+echo '30 * * * * root tar -czvf /var/opt/application_name/backups/backup.tgz data_folder/' | sudo tee /etc/cron.d/file_backup
 ```
 
 ```bash
