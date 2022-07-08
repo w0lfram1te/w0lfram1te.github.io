@@ -5,7 +5,7 @@ date_updated: 2022-06-30
 metadata: research
 tags:
 ---
-# Maintaining File Backupus using Cron and Logrotate
+# Maintaining File Backups using Cron and Logrotate
 
 The syncing solution that I use was designed to simply sync files between several devices. This means that any given time copies of my files would only exist on my devices and my remote server. 
 
