@@ -42,7 +42,9 @@ Add the following tag to your markdown file. The gist ID is the alphanumeric str
 So for example, for the following gist URL (https://gist.github.com/w0lfram1te/c1d2dcfd507a9a1fd5848af60ac92d70) the gist_id will be `c1d2dcfd507a9a1fd5848af60ac92d70`.
 
 ```
-{{ raw }}{% gist gist_id %}{{ endraw }}
+{{ raw }}
+{% gist gist_id %}
+{{ endraw }}
 ```
 
 {% gist c1d2dcfd507a9a1fd5848af60ac92d70 %}
