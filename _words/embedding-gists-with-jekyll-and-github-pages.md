@@ -37,10 +37,12 @@ DEPENDENCIES
 
 ## Adding the Gist to the Post
 
-Add the following tag to your markdown file. The gist ID is the alphanumeric string in the URL of the gist. So for example, for this gist URL https://gist.github.com/w0lfram1te/c1d2dcfd507a9a1fd5848af60ac92d70 the gist_id will be `c1d2dcfd507a9a1fd5848af60ac92d70`.
+Add the following tag to your markdown file. The gist ID is the alphanumeric string in the URL of the gist. So for example, for this gist URL `https://gist.github.com/w0lfram1te/c1d2dcfd507a9a1fd5848af60ac92d70` the gist_id will be `c1d2dcfd507a9a1fd5848af60ac92d70`.
 
 ```
-`\{\% gist gist_id \%\}`
+{{ raw }}
+{% gist gist_id %}
+{{ endraw }}
 ```
 
 {% gist c1d2dcfd507a9a1fd5848af60ac92d70 %}
