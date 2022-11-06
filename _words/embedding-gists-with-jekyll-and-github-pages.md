@@ -39,14 +39,10 @@ DEPENDENCIES
 
 Add the following tag to your markdown file. The gist ID is the alphanumeric string in the URL of the gist. 
 
-So for example, for the following gist URL the gist_id will be `c1d2dcfd507a9a1fd5848af60ac92d70`.
+So for example, for the following gist URL (https://gist.github.com/w0lfram1te/c1d2dcfd507a9a1fd5848af60ac92d70) the gist_id will be `c1d2dcfd507a9a1fd5848af60ac92d70`.
 
-	https://gist.github.com/w0lfram1te/c1d2dcfd507a9a1fd5848af60ac92d70
-
-{{ raw }}
 ```
-{% gist gist_id %}
+{{ raw }}{% gist gist_id %}{{ endraw }}
 ```
-{{ endraw }}
 
 {% gist c1d2dcfd507a9a1fd5848af60ac92d70 %}
