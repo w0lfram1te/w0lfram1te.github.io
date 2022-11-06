@@ -63,6 +63,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll
+  jekyll-gist
 
 BUNDLED WITH
    2.2.20
