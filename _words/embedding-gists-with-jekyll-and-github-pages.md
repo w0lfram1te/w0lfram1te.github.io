@@ -6,7 +6,7 @@ metadata: research
 ---
 # Embedding Gists with Jekyll and Github Pages
 
-Github gists can be embedded into Jekyll pages using the `gist` tag.
+Github gists can be embedded into Jekyll pages using the `gist` tag. 
 
 ## Configuring Jekyll 
 
@@ -37,14 +37,18 @@ DEPENDENCIES
 
 ## Adding the Gist to the Post
 
-Add the following tag to your markdown file. The gist ID is the alphanumeric string in the URL of the gist. 
+Now we can embed existing gists using the `gist` Liquid template tag and the gist ID.
 
-So for example, for the following gist URL (https://gist.github.com/w0lfram1te/c1d2dcfd507a9a1fd5848af60ac92d70) the gist_id will be `c1d2dcfd507a9a1fd5848af60ac92d70`.
+For the gist URL below the gist_id will be `c1d2dcfd507a9a1fd5848af60ac92d70`.
+
+> https://gist.github.com/w0lfram1te/c1d2dcfd507a9a1fd5848af60ac92d70 
+
+The template to be inserted should then look as shown below.
 
 ```
-{{ raw }}
-{% gist gist_id %}
-{{ endraw }}
+{{ "{% gist c1d2dcfd507a9a1fd5848af60ac92d70 " }}%}
 ```
+
+Which renders into this nifty little code block:
 
 {% gist c1d2dcfd507a9a1fd5848af60ac92d70 %}
