@@ -1,5 +1,11 @@
 # w0lfram1te.github.io
 
+## Quickstart (Docker)
+
+```bash
+docker-compose up &
+```
+
 ## Dependencies
 - npm/tailwindcss
 - Jekyll
@@ -32,3 +38,4 @@ Commands to remember:
 	```bash
 	bundle exec jekyll serve
 	```
+
