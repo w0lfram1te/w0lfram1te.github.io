@@ -4,12 +4,20 @@ collections:
     output          : true
     permalink       : /:title
     # sort_by         : date_created
+  snippets:
+    output          : true
+    permalink       : /snippets/:slug
 
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: "words"
+    values:
+      layout: "post"
+      author: "w0lfram1te"
+  - scope:
+      path: ""
+      type: "snippets"
     values:
       layout: "post"
       author: "w0lfram1te"

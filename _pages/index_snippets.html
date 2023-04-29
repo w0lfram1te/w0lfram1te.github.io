@@ -1,0 +1,27 @@
+---
+layout: default
+title: snippets
+permalink: /snippets
+---
+<div class="flex flex-row text-base pb-5 px-5 md:px-10 items-center justify-center border-b">
+  <div class="w-24 font-mono text-base text-center">date</div>
+  <div class="flex-grow font-mono text-base text-center px-5">content</div>  
+  <!-- <div class="w-28 text-base font-mono text-base text-center">metadata</div> -->
+</div>
+
+{% assign reverse_posts = site.snippets | sort: "date_created" | reverse %}
+{% for post in reverse_posts %}
+<div class="flex flex-row prose max-w-none py-5 px-5 md:px-10 items-center justify-center">
+  <div class="w-24 font-mono text-sm text-center">{{ post.date_created }}</div>
+  <div class="flex-1 font-sans text-left px-5">
+    <a class="text-lg" href="{{ post.url }}"><span class="text-lg">{{ post.title }}</span></a>
+  </div>
+  <!-- <div class="w-28 font-mono text-sm text-center text-purple-600">{{ post.metadata }}</div> -->
+</div>
+<div class="flex flex-row prose max-w-none py-5 px-5 md:px-10 items-left justify-left border-b">
+  <div class="w-24 font-mono text-sm text-center"></div>
+  <div class="flex-1 font-sans text-left px-5">
+    {{ post.content }}  
+  </div>
+</div>
+{% endfor %}

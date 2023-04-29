@@ -2,7 +2,7 @@ services:
   web:
     container_name: jekyll
     image: jekyll/jekyll
-    command: jekyll serve
+    command: jekyll serve --incremental --trace
     # command: bundle update  # use this command to update Gemfile.lock
     ports:
       - 4000:4000
