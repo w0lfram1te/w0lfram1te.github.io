@@ -29,6 +29,7 @@ exclude             : [
   "Gemfile", 
   "Gemfile.lock", 
   ".git",
+  ".obsidian",
   "archives",
   "package-lock.json",
   "tailwind.config.js"

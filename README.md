@@ -6,6 +6,13 @@
 docker-compose up &
 ```
 
+**Troubleshooting**
+- if updates to local files are not appearing in the local deployment, remove the local build directories and compile from scratch.
+
+```sh
+rm -rf _site/*
+```
+
 ## Dependencies
 - npm/tailwindcss
 - Jekyll
