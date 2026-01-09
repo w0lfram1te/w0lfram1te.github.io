@@ -18,14 +18,41 @@ rm -rf _site/*
 - Jekyll
 
 ### npm/tailwindcss
-```bash
+
+Compiling Tailwind CSS using the Tailwind CLI. Requires npm to be installed.
+
+#### Installing npm
+
+via apt:
+
+```sh
 sudo apt install npm
 sudo npm install -g n
 sudo n stable
 ```
-```bash
-npm install -D tailwindcss@latest postcss@latest autoprefixer@latest @tailwindcss/typography
+
+via brew:
+
+```sh
+brew install npm 
 ```
+
+#### Installing via npm
+
+reference: https://tailwindcss.com/docs/installation/tailwind-cli
+
+```sh
+npm install tailwindcss@4.1 @tailwindcss/cli@4.1.18 @tailwindcss/typography@0.4.1
+# can also install by running npm install if package.json is available
+# old method npm install -D tailwindcss@latest postcss@latest autoprefixer@latest @tailwindcss/typography
+```
+
+```sh
+npx @tailwindcss/cli -i ./assets/css/styles.css -o ./assets/css/tailwind.css
+```
+
+- https://github.com/tailwindlabs/tailwindcss-typography
+- 
 
 ### Jekyll
 ```bash
@@ -45,4 +72,3 @@ Commands to remember:
 	```bash
 	bundle exec jekyll serve
 	```
-
