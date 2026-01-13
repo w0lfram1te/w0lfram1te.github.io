@@ -1,3 +1,14 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 @custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: Lato, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: Roboto Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  --color-w0lfram1tepurple-500: #7c3aed;
+  --color-foobar-500: oklch(55.8% 0.288 302.321);
+}
+
+/*@config "../../tailwind.config.js";*/
