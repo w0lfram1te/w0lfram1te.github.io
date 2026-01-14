@@ -10,19 +10,14 @@
     --color-violet-700: oklch(49.1% 0.27 292.581);
     --color-purple-600: oklch(55.8% 0.288 302.321);
     --color-slate-200: oklch(92.9% 0.013 255.508);
-    --color-slate-300: oklch(86.9% 0.022 252.894);
-    --color-slate-400: oklch(70.4% 0.04 256.788);
     --color-gray-100: oklch(96.7% 0.003 264.542);
     --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-gray-700: oklch(37.3% 0.034 259.733);
     --color-gray-950: oklch(13% 0.028 261.692);
+    --color-zinc-800: oklch(27.4% 0.006 286.033);
     --color-white: #fff;
     --spacing: 0.25rem;
-    --container-3xs: 16rem;
-    --container-sm: 24rem;
     --container-lg: 32rem;
-    --container-xl: 36rem;
-    --container-2xl: 42rem;
     --container-3xl: 48rem;
     --container-4xl: 56rem;
     --container-5xl: 64rem;
@@ -42,6 +37,9 @@
     --radius-xl: 0.75rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --color-w0lfram1te-prose-body: 'var(--tw-prose-body)';
+    --color-w0lfram1te-prose-header: 'var(--tw-prose-header)';
+    --color-w0lfram1te-prose-invert-header: 'var(--tw-prose-invert-header)';
     --color-w0lfram1tepurple-500: #7c3aed;
   }
 }
@@ -1150,6 +1148,9 @@
   .text-purple-600 {
     color: var(--color-purple-600);
   }
+  .text-w0lfram1te-prose-header {
+    color: var(--color-w0lfram1te-prose-header);
+  }
   .text-w0lfram1tepurple-500 {
     color: var(--color-w0lfram1tepurple-500);
   }
@@ -1232,11 +1233,6 @@
       }
     }
   }
-  .md\:max-w-2xl {
-    @media (width >= 48rem) {
-      max-width: var(--container-2xl);
-    }
-  }
   .md\:max-w-3xl {
     @media (width >= 48rem) {
       max-width: var(--container-3xl);
@@ -1250,11 +1246,6 @@
   .md\:max-w-5xl {
     @media (width >= 48rem) {
       max-width: var(--container-5xl);
-    }
-  }
-  .md\:max-w-xl {
-    @media (width >= 48rem) {
-      max-width: var(--container-xl);
     }
   }
   .md\:px-10 {
@@ -1272,11 +1263,6 @@
       display: none;
     }
   }
-  .dark\:bg-gray-700 {
-    &:where(.dark, .dark *) {
-      background-color: var(--color-gray-700);
-    }
-  }
   .dark\:bg-gray-950 {
     &:where(.dark, .dark *) {
       background-color: var(--color-gray-950);
@@ -1290,14 +1276,46 @@
       }
     }
   }
+  .dark\:bg-zinc-800 {
+    &:where(.dark, .dark *) {
+      background-color: var(--color-zinc-800);
+    }
+  }
   .dark\:text-gray-300 {
     &:where(.dark, .dark *) {
       color: var(--color-gray-300);
     }
   }
+  .dark\:text-w0lfram1te-prose-invert-header {
+    &:where(.dark, .dark *) {
+      color: var(--color-w0lfram1te-prose-invert-header);
+    }
+  }
   .dark\:text-white {
     &:where(.dark, .dark *) {
       color: var(--color-white);
+    }
+  }
+  .dark\:prose-invert {
+    &:where(.dark, .dark *) {
+      --tw-prose-body: var(--tw-prose-invert-body);
+      --tw-prose-headings: var(--tw-prose-invert-headings);
+      --tw-prose-lead: var(--tw-prose-invert-lead);
+      --tw-prose-links: var(--tw-prose-invert-links);
+      --tw-prose-bold: var(--tw-prose-invert-bold);
+      --tw-prose-counters: var(--tw-prose-invert-counters);
+      --tw-prose-bullets: var(--tw-prose-invert-bullets);
+      --tw-prose-hr: var(--tw-prose-invert-hr);
+      --tw-prose-quotes: var(--tw-prose-invert-quotes);
+      --tw-prose-quote-borders: var(--tw-prose-invert-quote-borders);
+      --tw-prose-captions: var(--tw-prose-invert-captions);
+      --tw-prose-kbd: var(--tw-prose-invert-kbd);
+      --tw-prose-kbd-shadows: var(--tw-prose-invert-kbd-shadows);
+      --tw-prose-code: var(--tw-prose-invert-code);
+      --tw-prose-pre-code: var(--tw-prose-invert-pre-code);
+      --tw-prose-pre-bg: var(--tw-prose-invert-pre-bg);
+      --tw-prose-th-borders: var(--tw-prose-invert-th-borders);
+      --tw-prose-td-borders: var(--tw-prose-invert-td-borders);
     }
   }
   .dark\:\[--pattern-fg\:var\(--color-white\)\]\/10 {
@@ -1315,6 +1333,16 @@
           background-color: var(--color-gray-700);
         }
       }
+    }
+  }
+  .prose-a\:text-w0lfram1te-prose-header {
+    & :is(:where(a):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
+      color: var(--color-w0lfram1te-prose-header);
+    }
+  }
+  .prose-a\:no-underline {
+    & :is(:where(a):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
+      text-decoration-line: none;
     }
   }
 }

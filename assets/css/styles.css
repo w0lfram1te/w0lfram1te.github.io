@@ -7,6 +7,12 @@
   --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   --font-mono: Roboto Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
+  --color-w0lfram1te-prose-body: 'var(--tw-prose-body)';
+  --color-w0lfram1te-prose-header: 'var(--tw-prose-header)';
+  
+  --color-w0lfram1te-prose-invert-body: 'var(--tw-prose-invert-body)';
+  --color-w0lfram1te-prose-invert-header: 'var(--tw-prose-invert-header)'; 
+
   --color-w0lfram1tepurple-500: #7c3aed;
 }
 

@@ -3,18 +3,18 @@ layout: default
 title: home
 permalink: /
 ---
-<div class="flex flex-row text-base pb-5 px-5 md:px-10 items-center justify-center border-b border-slate-200">
-  <div class="w-24 font-mono text-base text-center">date</div>
-  <div class="grow font-mono text-base text-center px-5">title</div>  
-  <div class="w-28 text-base font-mono text-base text-center">metadata</div>
+<div class="flex flex-row pb-5 px-5 md:px-10 items-center justify-center border-b border-slate-200">
+  <div class="w-24 font-mono text-base text-center ">date</div>
+  <div class="grow font-mono text-base text-center px-5 ">title</div>  
+  <div class="w-28 font-mono text-base text-center ">metadata</div>
 </div>
 
 {% assign reverse_words = site.words | sort: "date_created" | reverse %}
 {% for post in reverse_words %}
-<div class="flex flex-row prose max-w-none py-5 px-5 md:px-10 items-center justify-center border-b border-slate-200">
+<div class="flex flex-row prose dark:prose-invert prose-purple max-w-none py-5 px-5 md:px-10 items-center justify-center border-b border-slate-200">
   <div class="w-24 font-mono text-sm text-center">{{ post.date_created }}</div>
   <div class="flex-1 font-sans text-left px-5">
-    <a class="text-lg no-underline" href="{{ post.url }}"><span class="text-lg">{{ post.title }}</span></a>
+    <a class="text-lg text-w0lfram1te-prose-header dark:text-w0lfram1te-prose-invert-header no-underline" href="{{ post.url }}"><span class="text-lg">{{ post.title }}</span></a>
   </div>
   <div class="w-28 font-mono text-sm text-center text-w0lfram1tepurple-500">{{ post.metadata }}</div>
 </div>
