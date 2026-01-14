@@ -5,10 +5,13 @@ window.onload = (event) => {
 	const darkModeToggle = document.querySelector('#darkModeToggle');
 	darkModeToggle.addEventListener('click', toggleDarkMode);
 
-	const setLight = document.querySelector('#setlightMode');
-	const setDark = document.querySelector('#setdarkMode');
-	setLight.addEventListener('click', setLightMode);
-	setDark.addEventListener('click', setDarkMode);
+	// const setLight = document.querySelector('#setlightMode');
+	// const setDark = document.querySelector('#setdarkMode');
+	// setLight.addEventListener('click', setLightMode);
+	// setDark.addEventListener('click', setDarkMode);
+
+	const darkModeIcon = document.querySelector("#darkModeIcon");
+	const lightModeIcon = document.querySelector("#lightModeIcon");
 };
 
 function applyTheme() {
