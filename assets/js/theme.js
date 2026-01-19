@@ -9,13 +9,10 @@ window.onload = (event) => {
 	// const setDark = document.querySelector('#setdarkMode');
 	// setLight.addEventListener('click', setLightMode);
 	// setDark.addEventListener('click', setDarkMode);
-
-	const darkModeIcon = document.querySelector("#darkModeIcon");
-	const lightModeIcon = document.querySelector("#lightModeIcon");
 };
 
 function applyTheme() {
-  document.body.classList.toggle(
+  document.documentElement.classList.toggle(
     "dark",
     localStorage.theme === "dark" ||
       (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches),
@@ -24,18 +21,18 @@ function applyTheme() {
 
 function setLightMode() {
 	localStorage.theme = "light";
-	document.body.classList.remove("dark");
+	document.documentElement.classList.remove("dark");
 }
 
 function setDarkMode() {
 	localStorage.theme = "dark";
-	document.body.classList.add("dark");
+	document.documentElement.classList.add("dark");
 }
 
 function toggleDarkMode() {
-	document.body.classList.toggle("dark");
+	document.documentElement.classList.toggle("dark");
 
-	if (document.body.classList.contains("dark")) {
+	if (document.documentElement.classList.contains("dark")) {
 		localStorage.theme = "dark"
 	} else {
 		localStorage.theme = "light"
