@@ -5,20 +5,20 @@
   :root, :host {
     --font-sans: Lato, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: Roboto Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    --color-yellow-500: oklch(79.5% 0.184 86.047);
-    --color-sky-400: oklch(74.6% 0.16 232.661);
-    --color-violet-700: oklch(49.1% 0.27 292.581);
     --color-purple-600: oklch(55.8% 0.288 302.321);
     --color-slate-200: oklch(92.9% 0.013 255.508);
+    --color-slate-400: oklch(70.4% 0.04 256.788);
+    --color-slate-700: oklch(37.2% 0.044 257.287);
+    --color-slate-900: oklch(20.8% 0.042 265.755);
     --color-gray-100: oklch(96.7% 0.003 264.542);
-    --color-gray-300: oklch(87.2% 0.01 258.338);
-    --color-gray-700: oklch(37.3% 0.034 259.733);
-    --color-gray-950: oklch(13% 0.028 261.692);
+    --color-gray-800: oklch(27.8% 0.033 256.848);
     --color-zinc-100: oklch(96.7% 0.001 286.375);
+    --color-zinc-400: oklch(70.5% 0.015 286.067);
+    --color-zinc-500: oklch(55.2% 0.016 285.938);
+    --color-zinc-600: oklch(44.2% 0.017 285.786);
     --color-zinc-800: oklch(27.4% 0.006 286.033);
     --color-white: #fff;
     --spacing: 0.25rem;
-    --container-lg: 32rem;
     --container-3xl: 48rem;
     --container-4xl: 56rem;
     --container-5xl: 64rem;
@@ -30,12 +30,9 @@
     --text-lg--line-height: calc(1.75 / 1.125);
     --font-weight-normal: 400;
     --font-weight-medium: 500;
-    --font-weight-semibold: 600;
     --font-weight-bold: 700;
     --tracking-normal: 0em;
     --leading-relaxed: 1.625;
-    --radius-lg: 0.5rem;
-    --radius-xl: 0.75rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --color-w0lfram1te-prose-header: 'var(--tw-prose-header)';
@@ -195,6 +192,12 @@
   .\@container\/header {
     container-type: inline-size;
     container-name: header;
+  }
+  .invisible {
+    visibility: hidden;
+  }
+  .visible {
+    visibility: visible;
   }
   .absolute {
     position: absolute;
@@ -858,9 +861,6 @@
   .hidden {
     display: none;
   }
-  .inline {
-    display: inline;
-  }
   .table {
     display: table;
   }
@@ -956,6 +956,9 @@
   .bg-zinc-100 {
     background-color: var(--color-zinc-100);
   }
+  .fill-current {
+    fill: currentcolor;
+  }
   .px-5 {
     padding-inline: calc(var(--spacing) * 5);
   }
@@ -1044,6 +1047,12 @@
     --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
+  .shadow-slate-200 {
+    --tw-shadow-color: oklch(92.9% 0.013 255.508);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-shadow-color: color-mix(in oklab, var(--color-slate-200) var(--tw-shadow-alpha), transparent);
+    }
+  }
   .outline {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
@@ -1111,6 +1120,46 @@
       height: calc(var(--spacing) * 4);
     }
   }
+  .dark\:border-slate-400 {
+    &:where(.dark, .dark *) {
+      border-color: var(--color-slate-400);
+    }
+  }
+  .dark\:border-slate-700 {
+    &:where(.dark, .dark *) {
+      border-color: var(--color-slate-700);
+    }
+  }
+  .dark\:border-slate-900 {
+    &:where(.dark, .dark *) {
+      border-color: var(--color-slate-900);
+    }
+  }
+  .dark\:border-zinc-400 {
+    &:where(.dark, .dark *) {
+      border-color: var(--color-zinc-400);
+    }
+  }
+  .dark\:border-zinc-500 {
+    &:where(.dark, .dark *) {
+      border-color: var(--color-zinc-500);
+    }
+  }
+  .dark\:border-zinc-600 {
+    &:where(.dark, .dark *) {
+      border-color: var(--color-zinc-600);
+    }
+  }
+  .dark\:border-zinc-800 {
+    &:where(.dark, .dark *) {
+      border-color: var(--color-zinc-800);
+    }
+  }
+  .dark\:bg-gray-800 {
+    &:where(.dark, .dark *) {
+      background-color: var(--color-gray-800);
+    }
+  }
   .dark\:bg-zinc-800 {
     &:where(.dark, .dark *) {
       background-color: var(--color-zinc-800);
@@ -1119,6 +1168,14 @@
   .dark\:text-w0lfram1te-prose-invert-header {
     &:where(.dark, .dark *) {
       color: var(--color-w0lfram1te-prose-invert-header);
+    }
+  }
+  .dark\:shadow-zinc-600 {
+    &:where(.dark, .dark *) {
+      --tw-shadow-color: oklch(44.2% 0.017 285.786);
+      @supports (color: color-mix(in lab, red, red)) {
+        --tw-shadow-color: color-mix(in oklab, var(--color-zinc-600) var(--tw-shadow-alpha), transparent);
+      }
     }
   }
   .dark\:prose-invert {
