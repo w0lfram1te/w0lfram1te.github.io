@@ -16,7 +16,7 @@ permalink: /snippets
   <div class="py-4 px-4 md:px-8">
     <div class="flex flex-row items-center justify-center">
       <div class="w-24 min-w-24 px-1 font-mono text-center text-sm">{{ post.date_created }}</div>
-      <div class="grow px-1 md:px-4">
+      <div class="grow px-4 md:px-8">
         <a class="text-lg text-w0lfram1te-prose-header dark:text-w0lfram1te-prose-invert-header no-underline" href="{{ post.url }}">
           {{ post.title }}
         </a>
@@ -24,8 +24,8 @@ permalink: /snippets
     </div>
 
     <div class="flex flex-row">
-      <div class="w-24 px-1"></div>
-      <div class="grow px-1 md:px-4 md:max-w-2xl">{{ post.content }}</div>
+      <div class="w-24"></div>
+      <div class="grow px-1 md:px-8 w-full md:max-w-2xl">{{ post.content }}</div>
     </div>
   </div>
 
