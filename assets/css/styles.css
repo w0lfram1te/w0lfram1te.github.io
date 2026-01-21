@@ -16,9 +16,23 @@
   --color-w0lfram1tepurple-500: #7c3aed;
 }
 
-/*@config "../../tailwind.config.js";*/
-
+/*@config "./tailwind.config.js";*/
+/*https://github.com/tailwindlabs/tailwindcss-typography/blob/main/src/styles.js*/
 @utility prose-purple {
   --tw-prose-links: var(--color-w0lfram1tepurple-500);
   --tw-prose-invert-links: var(--color-w0lfram1tepurple-500);
+  font-size: 1.04rem;
+
+  :where(h1):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+    font-size: 1.75em;
+    margin-top: 0;
+    margin-bottom: 0.8888889em;
+  }
+
+  :where(h2):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+    font-size: 1.5em;
+    margin-top: 1em;
+    margin-bottom: 0.75em;
+  }
 }
+
