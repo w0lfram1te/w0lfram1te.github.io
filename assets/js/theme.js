@@ -1,8 +1,8 @@
 applyTheme();
 
 // create elements with the indicated #ids to manipulate the theme
-window.onload = (event) => {
-	const darkModeToggle = document.querySelector('#darkModeToggle');
+function theme_onload() {
+  const darkModeToggle = document.querySelector('#darkModeToggle');
 	darkModeToggle.addEventListener('click', toggleDarkMode);
 
 	// const setLight = document.querySelector('#setlightMode');
@@ -10,6 +10,9 @@ window.onload = (event) => {
 	// setLight.addEventListener('click', setLightMode);
 	// setDark.addEventListener('click', setDarkMode);
 };
+
+window.addEventListener('DOMContentLoaded', theme_onload);
+
 
 function applyTheme() {
   document.documentElement.classList.toggle(
