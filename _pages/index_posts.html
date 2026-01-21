@@ -10,15 +10,17 @@ permalink: /
   <div class="w-20 min-w-20 px-1">metadata</div>
 </div>
 
-{% assign reverse_words = site.words | sort: "date_created" | reverse %}
-{% for post in reverse_words %}
-<div class="flex flex-row py-4 px-4 md:px-8 items-center justify-center border-b border-slate-200 dark:border-zinc-600 font-normal text-center text-base">
-  <div class="w-24 min-w-24 px-1 font-mono text-sm">{{ post.date_created }}</div>
-  <div class="grow w-24 min-w-24 px-4 md:px-8 text-left text-lg">
-    <a class="text-w0lfram1te-prose-header dark:text-w0lfram1te-prose-invert-header no-underline" href="{{ post.url }}">
-      {{ post.title }}
-    </a>
+<div class="divide-solid divide-y-1 divide-slate-200 dark:divide-zinc-600">
+  {% assign reverse_words = site.words | sort: "date_created" | reverse %}
+  {% for post in reverse_words %}
+  <div class="flex flex-row py-4 px-4 md:px-8 items-center justify-center font-normal text-center text-base">
+    <div class="w-24 min-w-24 px-1 font-mono text-sm">{{ post.date_created }}</div>
+    <div class="grow w-24 min-w-24 px-4 md:px-8 text-left text-lg">
+      <a class="text-w0lfram1te-prose-header dark:text-w0lfram1te-prose-invert-header no-underline" href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </div>
+    <div class="w-20 min-w-20 px-1 font-mono text-sm text-w0lfram1tepurple-500">{{ post.metadata }}</div>
   </div>
-  <div class="w-20 min-w-20 px-1 font-mono text-sm text-w0lfram1tepurple-500">{{ post.metadata }}</div>
+  {% endfor %}
 </div>
-{% endfor %}

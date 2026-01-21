@@ -17,3 +17,8 @@
 }
 
 /*@config "../../tailwind.config.js";*/
+
+@utility prose-purple {
+  --tw-prose-links: var(--color-w0lfram1tepurple-500);
+  --tw-prose-invert-links: var(--color-w0lfram1tepurple-500);
+}
