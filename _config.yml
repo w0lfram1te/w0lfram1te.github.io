@@ -19,7 +19,7 @@ defaults:
       path: ""
       type: "snippets"
     values:
-      layout: "post"
+      layout: "snippet"
       author: "w0lfram1te"
 
 # Handling Reading

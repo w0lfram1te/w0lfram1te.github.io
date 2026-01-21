@@ -23,12 +23,12 @@
     <div id="progress" class="w-full h-1 z-20" style="background:linear-gradient(to right, #7C3AED var(--scroll), transparent 0);"></div>
     
     <div class="flex flex-row py-1 w-full h-full md:max-w-6xl mx-auto justify-center items-center px-5 md:px-10 font-mono font-normal text-center text-base">
-      <div class="w-48 min-w-34 px-1 md:text-lg text-left">
+      <div class="grow w-48 min-w-34 px-1 md:text-lg text-left">
         <a href="/">
           <span class=text-w0lfram1tepurple-500>.</span>/w<span class=text-w0lfram1tepurple-500>0</span>lfram<span class=text-w0lfram1tepurple-500>1</span>te<span id=blink class="font-normal opacity-0">_</span>
         </a>
       </div>
-      <div class="grow"></div>
+      
       <div class="w-24 px-1
         {% if page.url == '/' or page.collection == 'words' %}prose-a:font-bold prose-a:underline{% endif %}">
         <a href="/">posts</a>
@@ -58,7 +58,7 @@
    </div>
   </div>
 
-  <div id=content class="container md:max-w-4xl mt-24 mx-auto min-h-screen">
+  <div id=content class="container md:max-w-4xl mt-20 mx-auto min-h-screen">
     {{ content }}
   </div>
 
