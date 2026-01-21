@@ -6,7 +6,9 @@
   <link href="/assets/css/tailwind-prod.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Roboto+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Roboto+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">  -->
   <!-- ... -->
   <script src="/assets/js/theme.js"></script>
   <script src="/assets/js/base.js"></script>
@@ -14,39 +16,40 @@
   <title>{{ page.title }} | w0lfram1te </title>
 </head>
 
-<body class="font-sans bg-zinc-100 dark:bg-zinc-800">
+<body class="font-sans bg-zinc-100 dark:bg-zinc-800 prose prose-purple dark:prose-invert max-w-none">
 
-  <div id=header class="@container/header fixed top-0 z-10 mx-auto h-14 min-w-full border-b border-slate-200 dark:border-zinc-600 bg-zinc-100 dark:bg-zinc-800 shadow-slate-200 dark:shadow-zinc-600 prose dark:prose-invert prose-purple prose-a:no-underline prose-a:text-w0lfram1te-prose-header">
+  <div id=header class="@container/header fixed top-0 z-10 mx-auto h-14 min-w-full bg-zinc-100 dark:bg-zinc-800 border-b border-slate-200 dark:border-zinc-600 shadow-slate-200 dark:shadow-zinc-600 prose-a:no-underline prose-a:text-w0lfram1te-prose-header">
+
     <div id="progress" class="w-full h-1 z-20" style="background:linear-gradient(to right, #7C3AED var(--scroll), transparent 0);"></div>
     
-    <div class="flex flex-row py-1 w-full h-full md:max-w-5xl mx-auto justify-center items-center px-5 md:px-10">
-      <div class="min-w-36 w-36 flex font-mono text-lg text-center font-medium">
+    <div class="flex flex-row py-1 w-full h-full md:max-w-6xl mx-auto justify-center items-center px-5 md:px-10 font-mono font-normal text-center text-base">
+      <div class="w-48 min-w-34 px-1 md:text-lg text-left">
         <a href="/">
           <span class=text-w0lfram1tepurple-500>.</span>/w<span class=text-w0lfram1tepurple-500>0</span>lfram<span class=text-w0lfram1tepurple-500>1</span>te<span id=blink class="font-normal opacity-0">_</span>
         </a>
       </div>
       <div class="grow"></div>
-      <div class="w-24 font-mono text-base text-center 
-        {% if page.url == '/' or page.collection == 'words' %}font-bold underline{% endif %}">
+      <div class="w-24 px-1
+        {% if page.url == '/' or page.collection == 'words' %}prose-a:font-bold prose-a:underline{% endif %}">
         <a href="/">posts</a>
       </div>
-      <div class="w-24 font-mono text-base text-center 
-        {% if page.url == '/snippets' or page.collection == 'snippets' %}font-bold underline{% endif %}">
+      <div class="w-24 px-1
+        {% if page.url == '/snippets' or page.collection == 'snippets' %}prose-a:font-bold prose-a:underline{% endif %}">
         <a href="/snippets">snippets</a>
       </div>
-      <div class="w-24 font-mono text-base text-center 
-        {% if page.url == '/whoami' %}font-bold underline{% endif %}">
+      <div class="w-24 px-1
+        {% if page.url == '/whoami' %}prose-a:font-bold prose-a:underline{% endif %}">
         <a href="/whoami">whoami</a>
       </div>
-      <div class="w-6 font-mono text-base text-center">
-        <button id="darkModeToggle" class="size-6 dark:size-4">
+      <div class="w-8 min-w-8 px-1">
+        <button id="darkModeToggle" class="align-sub size-5">
           <span class="block dark:hidden">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
               <path d="M10 2a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 2ZM10 15a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 15ZM10 7a3 3 0 1 0 0 6 3 3 0 0 0 0-6ZM15.657 5.404a.75.75 0 1 0-1.06-1.06l-1.061 1.06a.75.75 0 0 0 1.06 1.06l1.06-1.06ZM6.464 14.596a.75.75 0 1 0-1.06-1.06l-1.06 1.06a.75.75 0 0 0 1.06 1.06l1.06-1.06ZM18 10a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 18 10ZM5 10a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 5 10ZM14.596 15.657a.75.75 0 0 0 1.06-1.06l-1.06-1.061a.75.75 0 1 0-1.06 1.06l1.06 1.06ZM5.404 6.464a.75.75 0 0 0 1.06-1.06l-1.06-1.06a.75.75 0 1 0-1.061 1.06l1.06 1.06Z" />
             </svg>
           </span>
           <span class="dark:block hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="size-0">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -4 26 26" fill="currentColor" class="size-5">
               <path fillRule="evenodd" d="M7.455 2.004a.75.75 0 0 1 .26.77 7 7 0 0 0 9.958 7.967.75.75 0 0 1 1.067.853A8.5 8.5 0 1 1 6.647 1.921a.75.75 0 0 1 .808.083Z" clipRule="evenodd" />
             </svg>
           </span>
@@ -55,13 +58,13 @@
    </div>
   </div>
 
-  <div id=content class="container md:max-w-4xl mt-24 mx-auto min-h-screen prose dark:prose-invert prose-purple">
+  <div id=content class="container md:max-w-4xl mt-24 mx-auto min-h-screen">
     {{ content }}
   </div>
 
-  <div id=footer class="container mx-auto min-w-full prose dark:prose-invert prose-purple prose-a:no-underline prose-a:text-w0lfram1te-prose-header">
-    <div class="flex flex-row w-full md:max-w-3xl mx-auto justify-center py-5 px-5 md:px-10 border-t border-slate-200 dark:border-zinc-600">
-      <div class="flex-none font-mono">EOF</div>
+  <div id=footer class="container mx-auto min-w-full">
+    <div class="flex flex-row w-full md:max-w-4xl mx-auto justify-center py-5 px-5 md:px-10 border-t border-slate-200 dark:border-zinc-600">
+      <div class="flex-none font-mono font-normal">EOF</div>
    </div>
 
 </body>
