@@ -2,7 +2,7 @@
 title: Implementing Dark Mode on Tailwind v4
 date_created: 2026-01-14
 date_updated: 2026-01-19
-metadata: howto
+metadata: other
 ---
 # Implementing Dark Mode on Tailwind v4
 
