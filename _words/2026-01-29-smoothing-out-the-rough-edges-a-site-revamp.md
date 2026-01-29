@@ -6,7 +6,7 @@ metadata: other
 ---
 # Smoothing out the Rough Edges - A Site Revamp
 
-As part of the initiative of cleaning up the slightly rough edges of the site, I dedicated an entire mini-project to smoothing these out. Among these issues are the following pain points:
+As part of the initiative of cleaning up the slightly rough edges of the site, I collated a list of pain points and dedicated an entire mini-project to smoothing these out:
 
 - adding support for dark mode (finished and documented in another post)
 - removing redundant classes in the HTML
